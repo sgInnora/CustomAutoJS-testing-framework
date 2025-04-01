@@ -1,0 +1,133 @@
+{
+  "testConfig": {
+    "unitTests": {
+      "enabled": true,
+      "timeoutMs": 30000,
+      "includeTags": ["all"],
+      "excludeTags": []
+    },
+    "integrationTests": {
+      "enabled": true,
+      "timeoutMs": 60000,
+      "includeTags": ["all"],
+      "excludeTags": []
+    },
+    "benchmarkTests": {
+      "enabled": true,
+      "skipOnLowBattery": true,
+      "minBatteryLevel": 20,
+      "timeoutMs": 120000
+    },
+    "javascriptTests": {
+      "enabled": true,
+      "showUi": true,
+      "runLongTests": false,
+      "testDelay": 1000,
+      "testTimeout": 30000
+    },
+    "visualTests": {
+      "enabled": true,
+      "showAdvancedOptions": true,
+      "fullScreenMode": false,
+      "showMockControls": true,
+      "animationsEnabled": true,
+      "themeColor": "#2196F3"
+    },
+    "performanceTests": {
+      "enabled": true,
+      "iterations": 100,
+      "warmupIterations": 10,
+      "recommendationCount": 10,
+      "longRunningTestDuration": 60,
+      "concurrentBenchmarkDuration": 30,
+      "reportDetailLevel": "detailed"
+    },
+    "qualityTests": {
+      "enabled": true,
+      "maxMethodLength": 100,
+      "requiredDocumentation": true,
+      "namingConventionCheck": true,
+      "nullSafetyCheck": true,
+      "complexityThreshold": 15,
+      "includePrivateMethods": false
+    },
+    "stressTests": {
+      "enabled": true,
+      "concurrentThreads": 4,
+      "iterationsPerThread": 50,
+      "randomSeed": 42,
+      "maxRecommendations": 200,
+      "stressTimeSeconds": 10,
+      "maxDeviceStateChanges": 100,
+      "extremeConditions": true,
+      "extremeConditionThreshold": 5
+    },
+    "memoryTests": {
+      "enabled": true,
+      "leakTests": {
+        "iterations": 100,
+        "gcCycles": 3,
+        "memoryThresholdPercent": 10,
+        "pauseForVisualGcMs": 100,
+        "testJavaScriptBridge": true,
+        "longRunningIterations": 1000,
+        "collectHeapDumps": false,
+        "trackAllocationsSamples": 20
+      }
+    }
+  },
+  "benchmarkConfig": {
+    "cpuTestIterations": 10000,
+    "memoryTestSize": 10000000,
+    "resultExpirationDays": 14,
+    "scoringAdjustment": 1.0,
+    "storageTestFileSizeMb": 10,
+    "networkTestTimeoutMs": 5000,
+    "uiRenderingTestFrames": 600,
+    "batteryTestDurationMinutes": 2
+  },
+  "recommendationConfig": {
+    "batteryThresholds": {
+      "critical": 15,
+      "low": 30,
+      "moderate": 50
+    },
+    "temperatureThresholds": {
+      "high": 40,
+      "elevated": 35,
+      "overheating": 45
+    },
+    "memoryThresholds": {
+      "lowPercent": 15,
+      "moderatePercent": 30,
+      "criticalPercent": 10
+    },
+    "storageThresholds": {
+      "criticalGB": 1.0,
+      "lowGB": 5.0,
+      "lowPercent": 20,
+      "criticalPercent": 5
+    },
+    "benchmarkAgeForRenewalDays": 30,
+    "autoOptimizationEnabled": false,
+    "autoOptimizationAggressiveness": "moderate",
+    "notificationThreshold": "high"
+  },
+  "visualizationConfig": {
+    "colors": {
+      "cpu": "#4285F4",
+      "memory": "#DB4437",
+      "storage": "#F4B400",
+      "battery": "#0F9D58",
+      "network": "#9C27B0",
+      "general": "#757575"
+    },
+    "refreshRateMs": 1000,
+    "historyLengthPoints": 100,
+    "chartAnimationEnabled": true,
+    "darkModeEnabled": false,
+    "dataPointSize": 5,
+    "lineWidth": 2,
+    "showGridLines": true
+  }
+}
